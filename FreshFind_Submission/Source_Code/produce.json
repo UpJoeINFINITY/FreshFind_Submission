@@ -1,0 +1,130 @@
+[
+  {
+    "name": "Tomatoes",
+    "category": "Vegetables",
+    "description": "Rich in vitamins and perfect for stews, salads and sauces.",
+    "season": "Jun – Sep",
+    "markets": 5,
+    "image": "https://images.unsplash.com/photo-1546470427-e212b7d9c4d2?auto=format&fit=crop&w=900&q=85"
+  },
+  {
+    "name": "Plantain",
+    "category": "Fruits",
+    "description": "A staple in many African homes, rich in energy and fibre.",
+    "season": "May – Oct",
+    "markets": 6,
+    "image": "https://images.unsplash.com/photo-1603833665858-e61d17a86224?auto=format&fit=crop&w=900&q=85"
+  },
+  {
+    "name": "Leafy Greens",
+    "category": "Vegetables",
+    "description": "Packed with nutrients and great for everyday meals.",
+    "season": "Apr – Nov",
+    "markets": 7,
+    "image": "https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=900&q=85"
+  },
+  {
+    "name": "Carrots",
+    "category": "Vegetables",
+    "description": "Sweet, crunchy and full of beta-carotene.",
+    "season": "Jun – Oct",
+    "markets": 5,
+    "image": "https://images.unsplash.com/photo-1447175008436-054170c2e979?auto=format&fit=crop&w=900&q=85"
+  },
+  {
+    "name": "Mangoes",
+    "category": "Fruits",
+    "description": "Juicy, sweet and a true taste of the tropics.",
+    "season": "Apr – Aug",
+    "markets": 6,
+    "image": "https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=900&q=85"
+  },
+  {
+    "name": "Bell Peppers",
+    "category": "Vegetables",
+    "description": "Colourful, crunchy and rich in vitamin C.",
+    "season": "Jun – Oct",
+    "markets": 5,
+    "image": "https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?auto=format&fit=crop&w=900&q=85"
+  },
+  {
+    "name": "Basil",
+    "category": "Herbs & Spices",
+    "description": "Adds flavour and freshness to everyday cooking.",
+    "season": "May – Oct",
+    "markets": 4,
+    "image": "https://images.unsplash.com/photo-1618375569909-3c8616cf7733?auto=format&fit=crop&w=900&q=85"
+  },
+  {
+    "name": "Fresh Milk",
+    "category": "Dairy",
+    "description": "Nutritious, fresh and locally sourced.",
+    "season": "All year",
+    "markets": 3,
+    "image": "https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=900&q=85"
+  },
+  {
+    "name": "Pineapple",
+    "category": "Fruits",
+    "description": "Bright, juicy and naturally sweet.",
+    "season": "Mar – Jul",
+    "markets": 4,
+    "image": "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=900&q=85"
+  },
+  {
+    "name": "Okra",
+    "category": "Vegetables",
+    "description": "A versatile vegetable for soups and stews.",
+    "season": "Jun – Nov",
+    "markets": 6,
+    "image": "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=900&q=85"
+  },
+  {
+    "name": "Ginger",
+    "category": "Herbs & Spices",
+    "description": "Warm, aromatic and useful in food and drinks.",
+    "season": "All year",
+    "markets": 5,
+    "image": "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=900&q=85"
+  },
+  {
+    "name": "Rice",
+    "category": "Grains & Legumes",
+    "description": "A pantry staple available from local growers and sellers.",
+    "season": "All year",
+    "markets": 8,
+    "image": "https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&w=900&q=85"
+  },
+  {
+    "name": "Beans",
+    "category": "Grains & Legumes",
+    "description": "A filling local staple with plenty of cooking uses.",
+    "season": "All year",
+    "markets": 7,
+    "image": "https://images.unsplash.com/photo-1551462147-ff29053bfc14?auto=format&fit=crop&w=900&q=85"
+  },
+  {
+    "name": "Catfish",
+    "category": "Fish & Seafood",
+    "description": "Fresh local fish for grills, soups and stews.",
+    "season": "All year",
+    "markets": 4,
+    "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?auto=format&fit=crop&w=900&q=85"
+  },
+  {
+    "name": "Goat",
+    "category": "Meat",
+    "description": "Locally sourced meat for soups, grills and special meals.",
+    "season": "All year",
+    "markets": 3,
+    "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=85"
+  },
+  {
+    "name": "Honey",
+    "category": "Other",
+    "description": "Naturally sweet local honey from beekeepers.",
+    "season": "All year",
+    "markets": 4,
+    "image": "https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=900&q=85"
+  }
+]

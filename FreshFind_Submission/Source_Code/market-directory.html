@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>FreshFind | Market Directory</title>
+    <link rel="stylesheet" href="shared.css" />
+    <link rel="stylesheet" href="directory.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="brand"
+          ><span class="brand-mark"><i class="fa-solid fa-leaf"></i></span
+          ><span class="brand-copy"
+            ><strong>Fresh<span>Find</span></strong
+            ><small>Fresh All Along</small></span
+          ></a
+        >
+        <nav class="main-nav">
+          <a href="index.html">Home</a
+          ><a class="active" href="market-directory.html">Market Directory</a
+          ><a href="produce-guide.html">Produce Guide</a
+          ><a href="about.html">About Us</a><a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <div class="header-clock">
+            <i class="fa-regular fa-clock"></i><span id="clock"></span>
+          </div>
+          <span class="header-divider"></span
+          ><button class="header-login">
+            <i class="fa-regular fa-user"></i> Login / Sign Up</button
+          ><button class="header-favourite">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+        <button class="mobile-menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </header>
+    <main>
+      <div class="container breadcrumb">
+        <a href="index.html">Home</a><span>/</span>Market Directory
+      </div>
+      <section class="directory-hero">
+        <div class="container">
+          <div class="directory-banner">
+            <div class="directory-copy">
+              <span class="eyebrow" style="color: var(--lime)"
+                >Explore local</span
+              >
+              <h1>Farmers Market<br /><span>Directory.</span></h1>
+              <p>
+                Find fresh local produce, browse market days and discover places
+                worth visiting in your neighbourhood.
+              </p>
+            </div>
+          </div>
+          <div class="directory-filter">
+            <label class="filter-control"
+              ><i class="fa-solid fa-magnifying-glass"></i
+              ><input
+                id="marketSearch"
+                placeholder="Search markets..." /></label
+            ><label class="filter-control"
+              ><i class="fa-solid fa-location-dot"></i
+              ><select id="areaFilter">
+                <option value="">All Areas</option>
+                <option>Port Harcourt</option>
+                <option>Lagos</option>
+                <option>Abuja</option>
+                <option>Ibadan</option>
+                <option>Calabar</option>
+              </select></label
+            ><label class="filter-control"
+              ><i class="fa-regular fa-calendar"></i
+              ><select id="dayFilter">
+                <option value="">Any Day</option>
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+                <option>Saturday</option>
+                <option>Sunday</option>
+              </select></label
+            ><label class="filter-control"
+              ><i class="fa-solid fa-carrot"></i
+              ><select id="produceFilter">
+                <option value="">Any Produce</option>
+                <option>Fruits</option>
+                <option>Vegetables</option>
+                <option>Herbs</option>
+                <option>Dairy</option>
+                <option>Fish</option>
+              </select></label
+            ><button id="filterSubmit" class="filter-submit">
+              Find Markets
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="directory-toolbar">
+            <div>
+              <span class="eyebrow">FreshFind directory</span>
+              <h2>Local farmers markets</h2>
+            </div>
+            <span id="resultCount" class="result-count">6 markets found</span>
+          </div>
+          <div id="directoryGrid" class="directory-grid"></div>
+          <div class="map-banner">
+            <div class="map-copy">
+              <span class="eyebrow">Explore the neighbourhood</span>
+              <h3>Wondering what's around you?</h3>
+              <p>
+                Open FreshFind markets directly in Google Maps and discover
+                what's nearby.
+              </p>
+              <a
+                href="https://www.google.com/maps/search/farmers+markets"
+                target="_blank"
+                rel="noopener"
+                class="map-button"
+                ><i class="fa-solid fa-map-location-dot"></i> Explore markets on
+                Maps <i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+            <div class="map-frame">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.416551797252!2d8.347825073495143!3d5.036005238662647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x105d7d085daf70af%3A0x5558f9506be011a8!2sIkot%20Effanga%20Mkpa%20Health%20Centre!5e0!3m2!1sen!2sng!4v1790339584567!5m2!1sen!2sng"
+                loading="lazy"
+                title="FreshFind neighbourhood map"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+    <script src="directory.js"></script>
+  </body>
+</html>

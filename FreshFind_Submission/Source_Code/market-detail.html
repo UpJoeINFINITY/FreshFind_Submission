@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>FreshFind | Market Detail</title>
+    <link rel="stylesheet" href="shared.css" />
+    <link rel="stylesheet" href="detail.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="brand"
+          ><span class="brand-mark"><i class="fa-solid fa-leaf"></i></span
+          ><span class="brand-copy"
+            ><strong>Fresh<span>Find</span></strong
+            ><small>Fresh All Along</small></span
+          ></a
+        >
+        <nav class="main-nav">
+          <a href="index.html">Home</a
+          ><a class="active" href="market-directory.html">Market Directory</a
+          ><a href="produce-guide.html">Produce Guide</a
+          ><a href="about.html">About Us</a><a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <div class="header-clock">
+            <i class="fa-regular fa-clock"></i><span id="clock"></span>
+          </div>
+          <span class="header-divider"></span
+          ><button class="header-login">
+            <i class="fa-regular fa-user"></i> Login / Sign Up</button
+          ><button class="header-favourite">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+        <button class="mobile-menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </header>
+    <main>
+      <div class="container breadcrumb">
+        <a href="index.html">Home</a><span>/</span
+        ><a href="market-directory.html">Market Directory</a><span>/</span
+        ><span id="crumbName">Market</span>
+      </div>
+      <section class="section detail-top">
+        <div class="container">
+          <a href="market-directory.html" class="back-link"
+            ><i class="fa-solid fa-arrow-left"></i> Back to Directory</a
+          >
+          <div class="detail-hero">
+            <div id="detailImage" class="detail-image"></div>
+            <div class="detail-copy">
+              <div>
+                <span class="open-badge">Open this week</span
+                ><span id="detailArea" class="detail-area"></span>
+              </div>
+              <h1 id="detailName">Market</h1>
+              <p id="detailDescription"></p>
+              <div class="detail-facts">
+                <span
+                  ><i class="fa-solid fa-location-dot"></i><b>Address</b
+                  ><small id="detailAddress"></small></span
+                ><span
+                  ><i class="fa-regular fa-calendar"></i><b>Market days</b
+                  ><small id="detailDays"></small></span
+                ><span
+                  ><i class="fa-regular fa-clock"></i><b>Hours</b
+                  ><small id="detailHours"></small
+                ></span>
+              </div>
+              <div class="detail-actions">
+                <a class="btn" href="#map"
+                  >Get Directions <i class="fa-solid fa-arrow-right"></i></a
+                ><button
+                  class="btn btn-light"
+                  onclick="alert('Saved markets are a demo feature.')"
+                >
+                  <i class="fa-regular fa-heart"></i> Save Market
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">What you can find</span>
+              <h2>Popular market produce.</h2>
+            </div>
+            <p>
+              Use these categories as a quick guide before you visit.
+              Availability can change by vendor and season.
+            </p>
+          </div>
+          <div id="detailProduce" class="produce-tags"></div>
+        </div>
+      </section>
+      <section class="section detail-map" id="map">
+        <div class="container">
+          <div class="map-card">
+            <div class="map-copy">
+              <span class="eyebrow">Find your way there</span>
+              <h2>Open the market in Maps.</h2>
+              <p id="mapAddress"></p>
+              <a id="mapsLink" class="btn" target="_blank" rel="noopener"
+                >Open Google Maps
+                <i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+            <iframe
+              id="detailMap"
+              title="Market location map"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+    <script src="detail.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "responses": [
+    {
+      "keywords": ["tomato", "tomatoes"],
+      "answer": "Tomatoes are typically in season from June to September. Use the Produce Guide to see their season and the Market Directory to explore locations."
+    },
+    {
+      "keywords": ["plantain", "plantains"],
+      "answer": "Plantain is a popular staple and is typically available from May to October. Check the Produce Guide for details."
+    },
+    {
+      "keywords": ["season", "seasonal"],
+      "answer": "FreshFind highlights seasonal produce such as mangoes, tomatoes, leafy greens, plantain and peppers. Each produce card shows its season."
+    },
+    {
+      "keywords": ["market", "markets", "near me", "find"],
+      "answer": "Open Market Directory to filter by location, day and produce. Each market can be opened on its own detail page."
+    }
+  ]
+}

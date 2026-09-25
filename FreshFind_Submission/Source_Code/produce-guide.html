@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>FreshFind | Produce Guide</title>
+    <link rel="stylesheet" href="shared.css" />
+    <link rel="stylesheet" href="produce.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="brand"
+          ><span class="brand-mark"><i class="fa-solid fa-leaf"></i></span
+          ><span class="brand-copy"
+            ><strong>Fresh<span>Find</span></strong
+            ><small>Fresh All Along</small></span
+          ></a
+        >
+        <nav class="main-nav">
+          <a href="index.html">Home</a
+          ><a href="market-directory.html">Market Directory</a
+          ><a class="active" href="produce-guide.html">Produce Guide</a
+          ><a href="about.html">About Us</a><a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <div class="header-clock">
+            <i class="fa-regular fa-clock"></i><span id="clock"></span>
+          </div>
+          <span class="header-divider"></span
+          ><button class="header-login">
+            <i class="fa-regular fa-user"></i> Login / Sign Up</button
+          ><button class="header-favourite">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+        <button class="mobile-menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </header>
+    <main>
+      <div class="container breadcrumb">
+        <a href="index.html">Home</a><span>/</span>Produce Guide
+      </div>
+      <section class="produce-hero">
+        <div class="container">
+          <div class="produce-hero-shell">
+            <div class="produce-hero-copy">
+              <span class="eyebrow">Produce guide</span>
+              <h1>Know what to grow.<br /><em>Know where to find it.</em></h1>
+              <p>
+                Explore fresh produce, learn about seasons and discover the
+                markets where you can look for it.
+              </p>
+            </div>
+            <div class="produce-hero-image"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="guide-controls">
+            <button class="filter-pill active" data-category="All">
+              All Categories</button
+            ><button class="filter-pill" data-category="Fruits">Fruits</button
+            ><button class="filter-pill" data-category="Vegetables">
+              Vegetables</button
+            ><button class="filter-pill" data-category="Herbs & Spices">
+              Herbs &amp; Spices</button
+            ><button class="filter-pill" data-category="Dairy">Dairy</button
+            ><button class="filter-pill" data-category="Grains & Legumes">
+              Grains &amp; Legumes</button
+            ><button class="filter-pill" data-category="Meat">Meat</button
+            ><button class="filter-pill" data-category="Fish & Seafood">
+              Fish &amp; Seafood</button
+            ><label class="produce-search"
+              ><i class="fa-solid fa-magnifying-glass"></i
+              ><input id="produceSearch" placeholder="Search produce..."
+            /></label>
+          </div>
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Fresh picks</span>
+              <h2>Featured Produce</h2>
+            </div>
+            <button id="viewAll" class="btn btn-light">
+              View All <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <div id="produceGrid" class="produce-grid"></div>
+          <p id="emptyState" class="empty-state hidden">
+            No produce matches your search.
+          </p>
+        </div>
+      </section>
+    </main>
+    <div id="chatbot" class="chatbot hidden">
+      <div class="chat-head">
+        <div class="bot-logo"><i class="fa-solid fa-leaf"></i></div>
+        <div>
+          <strong>FreshFind Assistant</strong
+          ><small>Your local market guide</small>
+        </div>
+        <button id="chatMin">−</button><button id="chatClose">×</button>
+      </div>
+      <div id="chatBody" class="chat-body">
+        <div class="bot-message">
+          Hello! 👋 I can help you find markets, learn about produce and check
+          seasons.
+        </div>
+        <div class="quick-replies">
+          <button data-question="Where can I find tomatoes?">
+            Where can I find tomatoes?</button
+          ><button data-question="What's in season now?">
+            What's in season now?</button
+          ><button data-question="Find markets near me">
+            Find markets near me</button
+          ><button data-question="Tell me about plantains">
+            Tell me about plantains
+          </button>
+        </div>
+      </div>
+      <form id="chatForm" class="chat-input">
+        <input id="chatInput" placeholder="Type your question..." /><button>
+          ➤
+        </button>
+      </form>
+      <div class="chat-foot">Quick. Helpful. Always here.</div>
+    </div>
+    <button id="chatLauncher" class="chat-launcher">
+      <i class="fa-solid fa-message"></i><i></i>
+    </button>
+    <script src="app.js"></script>
+    <script src="produce.js"></script>
+  </body>
+</html>

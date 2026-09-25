@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>FreshFind | Contact</title>
+    <link rel="stylesheet" href="shared.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="brand"
+          ><span class="brand-mark"><i class="fa-solid fa-leaf"></i></span
+          ><span class="brand-copy"
+            ><strong>Fresh<span>Find</span></strong
+            ><small>Fresh All Along</small></span
+          ></a
+        >
+        <nav class="main-nav">
+          <a href="index.html">Home</a
+          ><a href="market-directory.html">Market Directory</a
+          ><a href="produce-guide.html">Produce Guide</a
+          ><a href="about.html">About Us</a
+          ><a class="active" href="contact.html">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <div class="header-clock">
+            <i class="fa-regular fa-clock"></i><span id="clock"></span>
+          </div>
+          <span class="header-divider"></span
+          ><button class="header-login">
+            <i class="fa-regular fa-user"></i> Login / Sign Up</button
+          ><button class="header-favourite">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+        <button class="mobile-menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </header>
+    <main>
+      <div class="container breadcrumb">
+        <a href="index.html">Home</a><span>/</span>Contact
+      </div>
+      <section class="contact-hero">
+        <div class="container">
+          <div class="contact-hero-shell">
+            <div class="contact-copy">
+              <span class="eyebrow" style="color: var(--lime)">Let's talk</span>
+              <h1>Have a question?<br />Say hello.</h1>
+              <p>
+                Tell us what you need help with, what you would like to see on
+                FreshFind, or just say hi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="contact-layout">
+            <aside class="contact-details">
+              <h2>Contact FreshFind.</h2>
+              <div class="detail">
+                <i class="fa-regular fa-envelope"></i>
+                <div>
+                  <strong>Email</strong><span>hello@freshfind.example</span>
+                </div>
+              </div>
+              <div class="detail">
+                <i class="fa-solid fa-phone"></i>
+                <div><strong>Phone</strong><span>+234 800 000 0000</span></div>
+              </div>
+              <div class="detail">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <strong>Location</strong><span>Port Harcourt, Nigeria</span>
+                </div>
+              </div>
+              <div class="detail">
+                <i class="fa-regular fa-clock"></i>
+                <div>
+                  <strong>Hours</strong
+                  ><span>Monday – Friday, 9:00 AM – 5:00 PM</span>
+                </div>
+              </div>
+            </aside>
+            <form class="contact-form" id="contactForm">
+              <h2>Send a message.</h2>
+              <div class="form-grid">
+                <div class="field">
+                  <label>Name</label><input required placeholder="Your name" />
+                </div>
+                <div class="field">
+                  <label>Email</label
+                  ><input required type="email" placeholder="you@example.com" />
+                </div>
+                <div class="field full">
+                  <label>Subject</label
+                  ><input required placeholder="How can we help?" />
+                </div>
+                <div class="field full">
+                  <label>Message</label
+                  ><textarea
+                    required
+                    placeholder="Write your message..."
+                  ></textarea>
+                </div>
+                <div class="field full">
+                  <button class="btn" type="submit">
+                    Send Message <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+              <p id="formMessage" class="form-message"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="section map-section" id="location">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Find your way</span>
+              <h2>Where FreshFind lives.</h2>
+            </div>
+            <p>
+              Use the map below to explore our demo location, or let your
+              browser share your current location.
+            </p>
+          </div>
+          <div class="map-wrap">
+            <iframe
+              id="contactMap"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.416551797252!2d8.347825073495143!3d5.036005238662647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x105d7d085daf70af%3A0x5558f9506be011a8!2sIkot%20Effanga%20Mkpa%20Health%20Centre!5e0!3m2!1sen!2sng!4v1790339584567!5m2!1sen!2sng"
+              loading="lazy"
+              title="FreshFind location"
+            ></iframe>
+          </div>
+          <div class="location-row">
+            <button id="findLocation">
+              <i class="fa-solid fa-location-crosshairs"></i> Use my location</button
+            ><span id="locationStatus" class="location-status"
+              >Your browser will ask for permission before sharing your
+              location.</span
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+    <script src="contact.js"></script>
+  </body>
+</html>

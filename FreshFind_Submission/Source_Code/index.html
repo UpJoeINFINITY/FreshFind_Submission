@@ -1,310 +1,346 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="FreshFind — discover farmers markets, seasonal produce, and local growers."
-    />
-    <title>FreshFind — Fresh All Along</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>FreshFind | Fresh All Along</title>
+    <link rel="stylesheet" href="shared.css" />
+    <link rel="stylesheet" href="home.css" />
     <link
       rel="stylesheet"
-      href="/FreshFind_Submission/Source_Code/css/style.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
   </head>
   <body>
-    <div class="announcement">
-      <span class="pulse"></span>
-      Fresh produce, local people, stronger communities.
-      <button id="dismissAnnouncement" aria-label="Dismiss announcement">
-        ×
-      </button>
-    </div>
-
     <header class="site-header">
-      <a class="brand" href="#">
-        <span class="brand-mark"><i data-lucide="sprout"></i></span>
-        <span>
-          <strong>Fresh<span>Find</span></strong>
-          <small>Fresh All Along</small>
-        </span>
-      </a>
-
-      <nav class="desktop-nav" aria-label="Primary navigation">
-        <a class="active" href="#home">Home</a>
-        <a href="#markets">Market Directory</a>
-        <a href="#produce">Produce Guide</a>
-        <a href="#story">About Us</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="header-actions">
-        <div class="time-pill">
-          <i data-lucide="clock-3"></i><span id="liveTime">10:24 AM</span>
-        </div>
-        <button class="icon-btn" aria-label="Toggle theme" id="themeToggle">
-          <i data-lucide="sun-moon"></i>
-        </button>
-        <button class="account-btn">
-          <i data-lucide="circle-user-round"></i><span>Login / Sign Up</span>
-        </button>
-        <button class="icon-btn" aria-label="Saved markets" id="savedBtn">
-          <i data-lucide="bookmark"></i>
-        </button>
-        <button
-          class="mobile-menu icon-btn"
-          aria-label="Open menu"
-          id="menuBtn"
+      <div class="header-inner">
+        <a href="index.html" class="brand"
+          ><span class="brand-mark"><i class="fa-solid fa-leaf"></i></span
+          ><span class="brand-copy"
+            ><strong>Fresh<span>Find</span></strong
+            ><small>Fresh All Along</small></span
+          ></a
         >
-          <i data-lucide="menu"></i>
+        <nav class="main-nav">
+          <a class="active" href="index.html">Home</a
+          ><a href="market-directory.html">Market Directory</a
+          ><a href="produce-guide.html">Produce Guide</a
+          ><a href="about.html">About Us</a><a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <div class="header-clock">
+            <i class="fa-regular fa-clock"></i><span id="clock">10:24 AM</span>
+          </div>
+          <span class="header-divider"></span
+          ><button class="header-login">
+            <i class="fa-regular fa-user"></i> Login / Sign Up</button
+          ><button class="header-favourite" aria-label="Saved markets">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+        <button class="mobile-menu" aria-label="Open navigation">
+          <i class="fa-solid fa-bars"></i>
         </button>
       </div>
     </header>
-
-    <main id="home">
-      <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <div class="eyebrow"><span></span> LOCAL. FRESH. SEASONAL.</div>
-          <h1>Find the good stuff<br /><em>close to home.</em></h1>
-          <p>
-            Discover farmers markets, meet local growers, and find what’s in
-            season — all in one beautiful place.
-          </p>
-
-          <div class="search-panel">
-            <div class="search-title">
-              <i data-lucide="search"></i><span>Find your next market</span
-              ><small>Start exploring</small>
+    <main>
+      <section class="home-hero">
+        <div class="container">
+          <div class="hero-shell">
+            <div class="hero-media"></div>
+            <div class="hero-content">
+              <div class="hero-copy">
+                <span class="eyebrow">Local food, easier to find</span>
+                <h1>Find the market.<br /><em>Find the good stuff.</em></h1>
+                <p>
+                  Discover farmers markets, seasonal produce and local food near
+                  you — all in one beautifully simple place.
+                </p>
+                <form class="hero-search" action="market-directory.html">
+                  <select name="area">
+                    <option value="">Any area</option>
+                    <option>Port Harcourt</option>
+                    <option>Lagos</option>
+                    <option>Abuja</option></select
+                  ><input
+                    name="q"
+                    placeholder="Search markets or produce"
+                  /><button>
+                    Search Markets <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </form>
+              </div>
             </div>
-            <div class="search-fields">
-              <label class="field">
-                <span class="field-icon"><i data-lucide="map-pin"></i></span>
-                <span class="field-copy"
-                  ><small>AREA</small
-                  ><select id="areaSelect">
-                    <option value="all">All areas</option>
-                    <option value="Riverside">Riverside</option>
-                    <option value="Lakeside">Lakeside</option>
-                    <option value="Sunnybrook">Sunnybrook</option>
-                    <option value="Downtown">Downtown</option>
-                  </select></span
-                >
-              </label>
-              <label class="field">
-                <span class="field-icon"
-                  ><i data-lucide="calendar-days"></i
-                ></span>
-                <span class="field-copy"
-                  ><small>DAY</small
-                  ><select id="daySelect">
-                    <option value="all">Any day</option>
-                    <option value="Wed">Wednesday</option>
-                    <option value="Thu">Thursday</option>
-                    <option value="Fri">Friday</option>
-                    <option value="Sat">Saturday</option>
-                    <option value="Sun">Sunday</option>
-                  </select></span
-                >
-              </label>
-              <label class="field">
-                <span class="field-icon"><i data-lucide="carrot"></i></span>
-                <span class="field-copy"
-                  ><small>PRODUCE</small
-                  ><select id="produceSelect">
-                    <option value="all">Any produce</option>
-                    <option value="Tomatoes">Tomatoes</option>
-                    <option value="Corn">Fresh Corn</option>
-                    <option value="Berries">Berries</option>
-                    <option value="Greens">Leafy Greens</option>
-                  </select></span
-                >
-              </label>
-              <button class="search-btn" id="searchBtn">
-                <i data-lucide="search"></i> Search markets
-              </button>
-            </div>
-            <div class="quick-tags">
-              <span>Popular:</span>
-              <button data-quick="Tomatoes">Tomatoes</button>
-              <button data-quick="Berries">Berries</button>
-              <button data-quick="Greens">Leafy greens</button>
-              <button data-quick="Corn">Fresh corn</button>
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <strong>20+</strong><span>markets listed</span>
+              </div>
+              <div class="hero-stat">
+                <strong>50+</strong><span>produce picks</span>
+              </div>
+              <div class="hero-stat">
+                <strong>7 days</strong><span>to explore</span>
+              </div>
             </div>
           </div>
         </div>
-        <div class="hero-badge">
-          <i data-lucide="heart"></i><strong>Good food</strong
-          ><span>starts local.</span>
-        </div>
       </section>
-
-      <section class="stats-strip">
-        <div><strong>48+</strong><span>Local markets</span></div>
-        <div><strong>120+</strong><span>Local growers</span></div>
-        <div><strong>365</strong><span>Days of fresh</span></div>
-        <div class="stat-note">
-          <i data-lucide="leaf"></i
-          ><span>Supporting the people who grow our food.</span>
-        </div>
-      </section>
-
-      <section class="section" id="markets">
-        <div class="section-heading">
-          <div>
-            <div class="kicker">DISCOVER NEARBY</div>
-            <h2>Markets worth <em>wandering into.</em></h2>
-            <p>Hand-picked local markets with fresh finds waiting for you.</p>
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Worth wandering into</span>
+              <h2>Markets with a local feel.</h2>
+            </div>
+            <p>
+              Browse welcoming markets, see what they carry and jump straight
+              into the details before you head out.
+            </p>
           </div>
-          <div class="heading-actions">
-            <button class="outline-btn" id="mapBtn">
-              <i data-lucide="map"></i> Explore map
-            </button>
-            <a href="#markets" class="text-link"
-              >View all <i data-lucide="arrow-up-right"></i
+          <div class="market-grid">
+            <article class="card market-card">
+              <div class="image-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1000&q=85"
+                  alt="Fresh produce at a market"
+                />
+              </div>
+              <div class="market-card-content">
+                <span class="tag">PORT HARCOURT</span>
+                <h3>Ikot Effanga Market</h3>
+                <p>
+                  Fresh vegetables, fruits, roots and everyday staples from
+                  local sellers.
+                </p>
+                <a class="view-link" href="market-detail.html?id=ikot"
+                  >Explore market <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </article>
+            <article class="card market-card">
+              <div class="image-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1000&q=85"
+                  alt="Farmers market stalls"
+                />
+              </div>
+              <div class="market-card-content">
+                <span class="tag">LAGOS</span>
+                <h3>Green Basket Market</h3>
+                <p>
+                  A lively neighbourhood stop for produce, herbs, eggs and local
+                  goods.
+                </p>
+                <a class="view-link" href="market-detail.html?id=green-basket"
+                  >Explore market <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </article>
+            <article class="card market-card">
+              <div class="image-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1000&q=85"
+                  alt="Colourful vegetables at a market"
+                />
+              </div>
+              <div class="market-card-content">
+                <span class="tag">ABUJA</span>
+                <h3>Harvest Lane</h3>
+                <p>
+                  Seasonal produce, farm eggs and pantry staples in a relaxed
+                  market setting.
+                </p>
+                <a class="view-link" href="market-detail.html?id=harvest-lane"
+                  >Explore market <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section section-cream">
+        <div class="container">
+          <div class="split-feature">
+            <div class="feature-photo"></div>
+            <div class="split-copy">
+              <span class="eyebrow">The FreshFind way</span>
+              <h2>Less searching.<br />More fresh.</h2>
+              <p>
+                FreshFind brings local markets and seasonal produce into one
+                clear directory so you can spend less time hunting for
+                information and more time shopping, cooking and supporting local
+                sellers.
+              </p>
+              <a class="btn" href="market-directory.html"
+                >Explore the directory <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Seasonal picks</span>
+              <h2>What looks good right now.</h2>
+            </div>
+            <a class="btn btn-light" href="produce-guide.html"
+              >View Produce Guide <i class="fa-solid fa-arrow-right"></i
             ></a>
           </div>
-        </div>
-
-        <div class="market-grid" id="marketGrid"></div>
-        <div class="empty-state" id="emptyState" hidden>
-          <i data-lucide="search-x"></i>
-          <h3>No markets matched that search.</h3>
-          <p>Try another area, day, or produce type.</p>
-          <button class="outline-btn" id="clearBtn">Clear filters</button>
-        </div>
-      </section>
-
-      <section class="season-section" id="produce">
-        <div class="section-heading compact">
-          <div>
-            <div class="kicker">WHAT'S GOOD RIGHT NOW</div>
-            <h2>Seasonal <em>picks.</em></h2>
-            <p>Produce at its freshest, right when it should be.</p>
-          </div>
-          <a href="#produce" class="text-link"
-            >Open produce guide <i data-lucide="arrow-up-right"></i
-          ></a>
-        </div>
-        <div class="produce-grid" id="produceGrid"></div>
-      </section>
-
-      <section class="story" id="story">
-        <div class="story-image"></div>
-        <div class="story-copy">
-          <div class="kicker">WHY FRESHFIND?</div>
-          <h2>More than a market directory.</h2>
-          <p>
-            FreshFind connects you with the people, places, and produce behind
-            your food. Less scrolling. More discovering. And a little more
-            goodness in every basket.
-          </p>
-          <div class="story-points">
-            <div>
-              <span><i data-lucide="sprout"></i></span>
-              <div>
-                <strong>Local first</strong>
-                <p>Discover growers and makers near you.</p>
-              </div>
-            </div>
-            <div>
-              <span><i data-lucide="calendar-heart"></i></span>
-              <div>
-                <strong>Always in season</strong>
-                <p>Know what’s tasting best right now.</p>
-              </div>
-            </div>
-            <div>
-              <span><i data-lucide="hand-heart"></i></span>
-              <div>
-                <strong>Community powered</strong>
-                <p>Every visit helps local food systems thrive.</p>
-              </div>
-            </div>
+          <div class="season-grid">
+            <a class="season-card" href="produce-guide.html?category=Fruits"
+              ><img
+                src="https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=800&q=85"
+                alt="Mangoes"
+              />
+              <div class="season-card-content">
+                <span>FRUITS</span>
+                <h3>Mangoes</h3>
+                <p>Juicy, sweet and in their tropical moment.</p>
+              </div></a
+            ><a
+              class="season-card"
+              href="produce-guide.html?category=Vegetables"
+              ><img
+                src="https://images.unsplash.com/photo-1546470427-e212b7d9c4d2?auto=format&fit=crop&w=800&q=85"
+                alt="Tomatoes"
+              />
+              <div class="season-card-content">
+                <span>VEGETABLES</span>
+                <h3>Tomatoes</h3>
+                <p>Perfect for stews, salads and sauces.</p>
+              </div></a
+            ><a
+              class="season-card"
+              href="produce-guide.html?category=Vegetables"
+              ><img
+                src="https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=800&q=85"
+                alt="Leafy greens"
+              />
+              <div class="season-card-content">
+                <span>VEGETABLES</span>
+                <h3>Leafy Greens</h3>
+                <p>Fresh, nutrient-rich and versatile.</p>
+              </div></a
+            ><a
+              class="season-card"
+              href="produce-guide.html?category=Herbs%20%26%20Spices"
+              ><img
+                src="https://images.unsplash.com/photo-1618375569909-3c8616cf7733?auto=format&fit=crop&w=800&q=85"
+                alt="Fresh basil"
+              />
+              <div class="season-card-content">
+                <span>HERBS &amp; SPICES</span>
+                <h3>Basil</h3>
+                <p>Fresh flavour for everyday cooking.</p>
+              </div></a
+            >
           </div>
         </div>
       </section>
-
-      <section class="newsletter" id="contact">
-        <div>
-          <div class="kicker">THE FRESH LETTER</div>
-          <h2>Fresh finds, delivered.</h2>
-          <p>
-            One short weekly email with seasonal produce, market events, and
-            local gems.
-          </p>
+      <section class="section">
+        <div class="container">
+          <div class="newsletter">
+            <div class="newsletter-content">
+              <span class="eyebrow">Stay close to the source</span>
+              <h2>Get the good stuff in your inbox.</h2>
+              <p>
+                Fresh market highlights, seasonal produce and new places to
+                explore.
+              </p>
+              <form
+                class="newsletter-form"
+                onsubmit="
+                  event.preventDefault();
+                  alert('Thanks! Newsletter signup is a demo feature.');
+                "
+              >
+                <input
+                  type="email"
+                  required
+                  placeholder="Your email address"
+                /><button>Keep me posted</button>
+              </form>
+            </div>
+          </div>
         </div>
-        <form id="newsletterForm">
-          <input
-            type="email"
-            id="emailInput"
-            placeholder="Your email address"
-            required
-          />
-          <button class="search-btn" type="submit">
-            Join the list <i data-lucide="arrow-right"></i>
-          </button>
-          <small id="formMsg"></small>
-        </form>
       </section>
     </main>
-
-    <footer>
-      <div class="footer-main">
-        <a class="brand" href="#">
-          <span class="brand-mark"><i data-lucide="sprout"></i></span>
-          <span
-            ><strong>Fresh<span>Find</span></strong
-            ><small>Fresh All Along</small></span
-          >
-        </a>
-        <div class="footer-links">
-          <div>
-            <strong>Explore</strong><a href="#markets">Markets</a
-            ><a href="#produce">Produce Guide</a><a href="#story">Our Story</a>
-          </div>
-          <div>
-            <strong>Community</strong><a href="#">For Growers</a
-            ><a href="#">List a Market</a><a href="#">Partner With Us</a>
-          </div>
-          <div>
-            <strong>Follow along</strong><a href="#">Instagram</a
-            ><a href="#">Facebook</a><a href="#">Newsletter</a>
-          </div>
+    <div id="chatbot" class="chatbot hidden">
+      <div class="chat-head">
+        <div class="bot-logo"><i class="fa-solid fa-leaf"></i></div>
+        <div>
+          <strong>FreshFind Assistant</strong
+          ><small>Your local market guide</small>
+        </div>
+        <button id="chatMin">−</button><button id="chatClose">×</button>
+      </div>
+      <div id="chatBody" class="chat-body">
+        <div class="bot-message">
+          Hello! 👋 I can help you find markets, explore produce and check
+          seasons.
+        </div>
+        <div class="quick-replies">
+          <button data-question="Where can I find tomatoes?">
+            Where can I find tomatoes?</button
+          ><button data-question="What's in season now?">
+            What's in season now?</button
+          ><button data-question="Find markets near me">
+            Find markets near me
+          </button>
         </div>
       </div>
-      <div class="footer-bottom">
-        <span>© 2026 FreshFind. Made for local food lovers.</span
-        ><span>Fresh food. Stronger communities.</span>
+      <form id="chatForm" class="chat-input">
+        <input id="chatInput" placeholder="Type your question..." /><button>
+          ➤
+        </button>
+      </form>
+      <div class="chat-foot">Quick. Helpful. Always here.</div>
+    </div>
+    <button
+      id="chatLauncher"
+      class="chat-launcher"
+      aria-label="Open FreshFind Assistant"
+    >
+      <i class="fa-solid fa-message"></i><i></i>
+    </button>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="index.html"
+              ><span class="brand-mark"><i class="fa-solid fa-leaf"></i></span
+              ><span class="brand-copy"
+                ><strong style="color: #fff">Fresh<span>Find</span></strong
+                ><small style="color: #9eb1a5">Fresh All Along</small></span
+              ></a
+            >
+            <p>Local markets and fresh produce, easier to discover.</p>
+          </div>
+          <div>
+            <h4>Explore</h4>
+            <a href="market-directory.html">Market Directory</a
+            ><a href="produce-guide.html">Produce Guide</a>
+          </div>
+          <div>
+            <h4>FreshFind</h4>
+            <a href="about.html">About Us</a><a href="contact.html">Contact</a>
+          </div>
+          <div>
+            <h4>Demo</h4>
+            <a href="market-detail.html?id=ikot">Market Detail</a
+            ><a href="contact.html#location">Find Location</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 FreshFind</span
+          ><span>Support local. Eat fresh. Stay connected.</span>
+        </div>
       </div>
     </footer>
-
-    <div class="toast" id="toast">
-      <i data-lucide="check-circle-2"></i><span></span>
-    </div>
-
-    <div class="modal-backdrop" id="modalBackdrop" hidden>
-      <div
-        class="modal"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="modalTitle"
-      >
-        <button class="modal-close" id="modalClose" aria-label="Close">
-          <i data-lucide="x"></i>
-        </button>
-        <div id="modalContent"></div>
-      </div>
-    </div>
-
-    <script src="script.js"></script>
+    <script src="app.js"></script>
+    <script src="home.js"></script>
   </body>
 </html>

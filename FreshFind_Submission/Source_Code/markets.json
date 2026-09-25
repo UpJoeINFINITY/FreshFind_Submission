@@ -1,0 +1,68 @@
+[
+  {
+    "id": "ikot",
+    "name": "Ikot Effanga Market",
+    "area": "Port Harcourt",
+    "days": ["Wednesday", "Saturday"],
+    "hours": "7:00 AM – 2:00 PM",
+    "description": "Fresh vegetables, fruits, roots and everyday staples from local sellers.",
+    "produce": ["Vegetables", "Fruits", "Herbs", "Fish"],
+    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1000&q=85",
+    "address": "Ikot Effanga, Port Harcourt, Rivers State"
+  },
+  {
+    "id": "green-basket",
+    "name": "Green Basket Market",
+    "area": "Lagos",
+    "days": ["Tuesday", "Friday", "Saturday"],
+    "hours": "8:00 AM – 3:00 PM",
+    "description": "A lively neighbourhood stop for produce, herbs, eggs and local goods.",
+    "produce": ["Vegetables", "Fruits", "Herbs", "Dairy"],
+    "image": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1000&q=85",
+    "address": "Ikeja, Lagos, Nigeria"
+  },
+  {
+    "id": "harvest-lane",
+    "name": "Harvest Lane Farmers Market",
+    "area": "Abuja",
+    "days": ["Wednesday", "Saturday", "Sunday"],
+    "hours": "8:00 AM – 2:00 PM",
+    "description": "Seasonal produce, farm eggs and pantry staples in a relaxed market setting.",
+    "produce": ["Fruits", "Vegetables", "Dairy", "Herbs"],
+    "image": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1000&q=85",
+    "address": "Wuse, Abuja, Nigeria"
+  },
+  {
+    "id": "riverside",
+    "name": "Riverside Fresh Market",
+    "area": "Port Harcourt",
+    "days": ["Monday", "Thursday", "Saturday"],
+    "hours": "7:30 AM – 1:30 PM",
+    "description": "A compact market known for greens, peppers, plantain and fresh fish.",
+    "produce": ["Vegetables", "Fruits", "Fish"],
+    "image": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1000&q=85",
+    "address": "Riverside, Port Harcourt, Rivers State"
+  },
+  {
+    "id": "community",
+    "name": "Community Harvest Market",
+    "area": "Ibadan",
+    "days": ["Friday", "Saturday"],
+    "hours": "8:00 AM – 2:00 PM",
+    "description": "Local growers bring fresh staples, vegetables and seasonal fruit.",
+    "produce": ["Vegetables", "Fruits", "Herbs"],
+    "image": "https://images.unsplash.com/photo-1472141521881-95d0e87e2e39?auto=format&fit=crop&w=1000&q=85",
+    "address": "Bodija, Ibadan, Oyo State"
+  },
+  {
+    "id": "calabar",
+    "name": "Calabar Weekend Market",
+    "area": "Calabar",
+    "days": ["Saturday", "Sunday"],
+    "hours": "7:00 AM – 1:00 PM",
+    "description": "Weekend shopping for fresh produce, seafood and local pantry goods.",
+    "produce": ["Fish", "Vegetables", "Fruits", "Herbs"],
+    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1000&q=85",
+    "address": "Calabar, Cross River State"
+  }
+]
