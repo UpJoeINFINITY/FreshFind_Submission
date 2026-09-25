@@ -1,11 +1,193 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h2>Done and dusted</h2>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>FreshFind — Fresh All Along</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <div class="logo-icon">🌱</div>
+        <div class="logo-text">
+          <h1>FreshFind</h1>
+          <span>Fresh All Along</span>
+        </div>
+      </div>
+      <nav>
+        <a href="#" class="active">Home</a>
+        <a href="#">Market Directory</a>
+        <a href="#">Produce Guide</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+      </nav>
+      <div class="header-right">
+        <div class="item">🕐 10:24 AM</div>
+        <div class="item">👤 Login / Sign Up</div>
+        <div class="item">🔖</div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-bg">
+        <img
+          src="https://source.unsplash.com/1200x800/?farmers-market,vegetables"
+          alt="Farmers market produce"
+        />
+      </div>
+      <div class="hero-fade"></div>
+      <div class="hero-inner">
+        <div class="hero-leaf">🌿</div>
+        <h1>Fresh<span>Find</span></h1>
+        <h2>Fresh All Along</h2>
+        <p>
+          Discover nearby farmers markets, find fresh and seasonal produce, and
+          support local growers — all in one place.
+        </p>
+      </div>
+    </section>
+
+    <div class="search-card">
+      <div class="search-title">
+        <span class="icon">🔍</span> Find a Market Near You
+      </div>
+      <div class="search-row">
+        <div class="select-box">📍 Select Area ▾</div>
+        <div class="select-box">📅 Select Day ▾</div>
+        <div class="select-box">🥕 Select Produce Type ▾</div>
+        <button class="search-btn">🔍 Search Markets</button>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="two-col">
+        <div>
+          <div class="section-header">
+            <h3>🏬 Currently Open Markets</h3>
+            <span class="view-all">View All →</span>
+          </div>
+          <div class="carousel-wrap">
+            <div class="arrow-nav">‹</div>
+            <div class="market-track">
+              <div class="market-card">
+                <div class="market-img">
+                  <span class="badge">Open Now</span>
+                  <img
+                    src="https://source.unsplash.com/400x300/?farmers-market"
+                    alt="Green Valley Farmers Market"
+                  />
+                </div>
+                <div class="market-info">
+                  <h4>Green Valley Farmers Market</h4>
+                  <div class="meta-line">📍 Riverside Park, Mapleton</div>
+                  <div class="meta-line">📅 Wed – Sat (8:00 AM – 2:00 PM)</div>
+                  <div class="produce-icons">🍅🥬🥦🥕🌽</div>
+                  <a class="details-link" href="#">View Details →</a>
+                </div>
+              </div>
+              <div class="market-card">
+                <div class="market-img">
+                  <span class="badge">Open Now</span>
+                  <img
+                    src="https://source.unsplash.com/400x300/?market,stall"
+                    alt="Lakeside Market"
+                  />
+                </div>
+                <div class="market-info">
+                  <h4>Lakeside Market</h4>
+                  <div class="meta-line">📍 Lakeside Community Center</div>
+                  <div class="meta-line">📅 Tue – Sun (9:00 AM – 3:00 PM)</div>
+                  <div class="produce-icons">🫐🥦🍑🍓🍅</div>
+                  <a class="details-link" href="#">View Details →</a>
+                </div>
+              </div>
+              <div class="market-card">
+                <div class="market-img">
+                  <span class="badge">Open Now</span>
+                  <img
+                    src="https://source.unsplash.com/400x300/?produce,market"
+                    alt="Sunnybrook Farmers Market"
+                  />
+                </div>
+                <div class="market-info">
+                  <h4>Sunnybrook Farmers Market</h4>
+                  <div class="meta-line">📍 Sunnybrook Plaza</div>
+                  <div class="meta-line">📅 Thu – Sun (8:00 AM – 1:00 PM)</div>
+                  <div class="produce-icons">🥬🥕🍑🫐</div>
+                  <a class="details-link" href="#">View Details →</a>
+                </div>
+              </div>
+            </div>
+            <div class="arrow-nav">›</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-header">
+            <h3>🍃 This Week's Seasonal Picks</h3>
+            <span class="view-all">View All →</span>
+          </div>
+          <div class="picks-grid">
+            <div class="pick-card">
+              <div class="pick-img">
+                <img src="https://source.unsplash.com/200x200/?tomatoes" />
+              </div>
+              <h5>Tomatoes</h5>
+              <span>In Season: Jun – Sep</span>
+            </div>
+            <div class="pick-card">
+              <div class="pick-img">
+                <img src="https://source.unsplash.com/200x200/?corn" />
+              </div>
+              <h5>Fresh Corn</h5>
+              <span>In Season: Jul – Sep</span>
+            </div>
+            <div class="pick-card">
+              <div class="pick-img">
+                <img src="https://source.unsplash.com/200x200/?blueberries" />
+              </div>
+              <h5>Blueberries</h5>
+              <span>In Season: Jul – Aug</span>
+            </div>
+            <div class="pick-card">
+              <div class="pick-img">
+                <img src="https://source.unsplash.com/200x200/?zucchini" />
+              </div>
+              <h5>Zucchini</h5>
+              <span>In Season: Jun – Sep</span>
+            </div>
+            <div class="pick-card">
+              <div class="pick-img">
+                <img src="https://source.unsplash.com/200x200/?bell-peppers" />
+              </div>
+              <h5>Bell Peppers</h5>
+              <span>In Season: Jul – Oct</span>
+            </div>
+            <div class="pick-card">
+              <div class="pick-img">
+                <img src="https://source.unsplash.com/200x200/?leafy-greens" />
+              </div>
+              <h5>Leafy Greens</h5>
+              <span>In Season: May – Oct</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-band">
+      <div class="item">🌿 Support Local Farmers</div>
+      <div class="item">❤️ Eat Fresh &amp; Seasonal</div>
+      <div class="item">📍 Build Stronger Communities</div>
+    </div>
+
+    <div class="chat-fab">
+      <div class="chat-bubble">Need help?<br />Chat with us!</div>
+      <div class="chat-btn">🤖<span class="dot"></span></div>
+    </div>
+  </body>
 </html>
