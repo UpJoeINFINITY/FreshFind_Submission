@@ -2,192 +2,309 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
+      name="description"
+      content="FreshFind — discover farmers markets, seasonal produce, and local growers."
     />
     <title>FreshFind — Fresh All Along</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+      rel="stylesheet"
+      href="/FreshFind_Submission/Source_Code/css/style.css"
+    />
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <div class="logo-icon">🌱</div>
-        <div class="logo-text">
-          <h1>FreshFind</h1>
-          <span>Fresh All Along</span>
-        </div>
-      </div>
-      <nav>
-        <a href="#" class="active">Home</a>
-        <a href="#">Market Directory</a>
-        <a href="#">Produce Guide</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact</a>
+    <div class="announcement">
+      <span class="pulse"></span>
+      Fresh produce, local people, stronger communities.
+      <button id="dismissAnnouncement" aria-label="Dismiss announcement">
+        ×
+      </button>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#">
+        <span class="brand-mark"><i data-lucide="sprout"></i></span>
+        <span>
+          <strong>Fresh<span>Find</span></strong>
+          <small>Fresh All Along</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a class="active" href="#home">Home</a>
+        <a href="#markets">Market Directory</a>
+        <a href="#produce">Produce Guide</a>
+        <a href="#story">About Us</a>
+        <a href="#contact">Contact</a>
       </nav>
-      <div class="header-right">
-        <div class="item">🕐 10:24 AM</div>
-        <div class="item">👤 Login / Sign Up</div>
-        <div class="item">🔖</div>
+
+      <div class="header-actions">
+        <div class="time-pill">
+          <i data-lucide="clock-3"></i><span id="liveTime">10:24 AM</span>
+        </div>
+        <button class="icon-btn" aria-label="Toggle theme" id="themeToggle">
+          <i data-lucide="sun-moon"></i>
+        </button>
+        <button class="account-btn">
+          <i data-lucide="circle-user-round"></i><span>Login / Sign Up</span>
+        </button>
+        <button class="icon-btn" aria-label="Saved markets" id="savedBtn">
+          <i data-lucide="bookmark"></i>
+        </button>
+        <button
+          class="mobile-menu icon-btn"
+          aria-label="Open menu"
+          id="menuBtn"
+        >
+          <i data-lucide="menu"></i>
+        </button>
       </div>
     </header>
 
-    <section class="hero">
-      <div class="hero-bg">
-        <img
-          src="https://source.unsplash.com/1200x800/?farmers-market,vegetables"
-          alt="Farmers market produce"
-        />
-      </div>
-      <div class="hero-fade"></div>
-      <div class="hero-inner">
-        <div class="hero-leaf">🌿</div>
-        <h1>Fresh<span>Find</span></h1>
-        <h2>Fresh All Along</h2>
-        <p>
-          Discover nearby farmers markets, find fresh and seasonal produce, and
-          support local growers — all in one place.
-        </p>
-      </div>
-    </section>
+    <main id="home">
+      <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <div class="eyebrow"><span></span> LOCAL. FRESH. SEASONAL.</div>
+          <h1>Find the good stuff<br /><em>close to home.</em></h1>
+          <p>
+            Discover farmers markets, meet local growers, and find what’s in
+            season — all in one beautiful place.
+          </p>
 
-    <div class="search-card">
-      <div class="search-title">
-        <span class="icon">🔍</span> Find a Market Near You
-      </div>
-      <div class="search-row">
-        <div class="select-box">📍 Select Area ▾</div>
-        <div class="select-box">📅 Select Day ▾</div>
-        <div class="select-box">🥕 Select Produce Type ▾</div>
-        <button class="search-btn">🔍 Search Markets</button>
-      </div>
-    </div>
-
-    <section class="section">
-      <div class="two-col">
-        <div>
-          <div class="section-header">
-            <h3>🏬 Currently Open Markets</h3>
-            <span class="view-all">View All →</span>
-          </div>
-          <div class="carousel-wrap">
-            <div class="arrow-nav">‹</div>
-            <div class="market-track">
-              <div class="market-card">
-                <div class="market-img">
-                  <span class="badge">Open Now</span>
-                  <img
-                    src="https://source.unsplash.com/400x300/?farmers-market"
-                    alt="Green Valley Farmers Market"
-                  />
-                </div>
-                <div class="market-info">
-                  <h4>Green Valley Farmers Market</h4>
-                  <div class="meta-line">📍 Riverside Park, Mapleton</div>
-                  <div class="meta-line">📅 Wed – Sat (8:00 AM – 2:00 PM)</div>
-                  <div class="produce-icons">🍅🥬🥦🥕🌽</div>
-                  <a class="details-link" href="#">View Details →</a>
-                </div>
-              </div>
-              <div class="market-card">
-                <div class="market-img">
-                  <span class="badge">Open Now</span>
-                  <img
-                    src="https://source.unsplash.com/400x300/?market,stall"
-                    alt="Lakeside Market"
-                  />
-                </div>
-                <div class="market-info">
-                  <h4>Lakeside Market</h4>
-                  <div class="meta-line">📍 Lakeside Community Center</div>
-                  <div class="meta-line">📅 Tue – Sun (9:00 AM – 3:00 PM)</div>
-                  <div class="produce-icons">🫐🥦🍑🍓🍅</div>
-                  <a class="details-link" href="#">View Details →</a>
-                </div>
-              </div>
-              <div class="market-card">
-                <div class="market-img">
-                  <span class="badge">Open Now</span>
-                  <img
-                    src="https://source.unsplash.com/400x300/?produce,market"
-                    alt="Sunnybrook Farmers Market"
-                  />
-                </div>
-                <div class="market-info">
-                  <h4>Sunnybrook Farmers Market</h4>
-                  <div class="meta-line">📍 Sunnybrook Plaza</div>
-                  <div class="meta-line">📅 Thu – Sun (8:00 AM – 1:00 PM)</div>
-                  <div class="produce-icons">🥬🥕🍑🫐</div>
-                  <a class="details-link" href="#">View Details →</a>
-                </div>
-              </div>
+          <div class="search-panel">
+            <div class="search-title">
+              <i data-lucide="search"></i><span>Find your next market</span
+              ><small>Start exploring</small>
             </div>
-            <div class="arrow-nav">›</div>
-          </div>
-        </div>
-
-        <div>
-          <div class="section-header">
-            <h3>🍃 This Week's Seasonal Picks</h3>
-            <span class="view-all">View All →</span>
-          </div>
-          <div class="picks-grid">
-            <div class="pick-card">
-              <div class="pick-img">
-                <img src="https://source.unsplash.com/200x200/?tomatoes" />
-              </div>
-              <h5>Tomatoes</h5>
-              <span>In Season: Jun – Sep</span>
+            <div class="search-fields">
+              <label class="field">
+                <span class="field-icon"><i data-lucide="map-pin"></i></span>
+                <span class="field-copy"
+                  ><small>AREA</small
+                  ><select id="areaSelect">
+                    <option value="all">All areas</option>
+                    <option value="Riverside">Riverside</option>
+                    <option value="Lakeside">Lakeside</option>
+                    <option value="Sunnybrook">Sunnybrook</option>
+                    <option value="Downtown">Downtown</option>
+                  </select></span
+                >
+              </label>
+              <label class="field">
+                <span class="field-icon"
+                  ><i data-lucide="calendar-days"></i
+                ></span>
+                <span class="field-copy"
+                  ><small>DAY</small
+                  ><select id="daySelect">
+                    <option value="all">Any day</option>
+                    <option value="Wed">Wednesday</option>
+                    <option value="Thu">Thursday</option>
+                    <option value="Fri">Friday</option>
+                    <option value="Sat">Saturday</option>
+                    <option value="Sun">Sunday</option>
+                  </select></span
+                >
+              </label>
+              <label class="field">
+                <span class="field-icon"><i data-lucide="carrot"></i></span>
+                <span class="field-copy"
+                  ><small>PRODUCE</small
+                  ><select id="produceSelect">
+                    <option value="all">Any produce</option>
+                    <option value="Tomatoes">Tomatoes</option>
+                    <option value="Corn">Fresh Corn</option>
+                    <option value="Berries">Berries</option>
+                    <option value="Greens">Leafy Greens</option>
+                  </select></span
+                >
+              </label>
+              <button class="search-btn" id="searchBtn">
+                <i data-lucide="search"></i> Search markets
+              </button>
             </div>
-            <div class="pick-card">
-              <div class="pick-img">
-                <img src="https://source.unsplash.com/200x200/?corn" />
-              </div>
-              <h5>Fresh Corn</h5>
-              <span>In Season: Jul – Sep</span>
-            </div>
-            <div class="pick-card">
-              <div class="pick-img">
-                <img src="https://source.unsplash.com/200x200/?blueberries" />
-              </div>
-              <h5>Blueberries</h5>
-              <span>In Season: Jul – Aug</span>
-            </div>
-            <div class="pick-card">
-              <div class="pick-img">
-                <img src="https://source.unsplash.com/200x200/?zucchini" />
-              </div>
-              <h5>Zucchini</h5>
-              <span>In Season: Jun – Sep</span>
-            </div>
-            <div class="pick-card">
-              <div class="pick-img">
-                <img src="https://source.unsplash.com/200x200/?bell-peppers" />
-              </div>
-              <h5>Bell Peppers</h5>
-              <span>In Season: Jul – Oct</span>
-            </div>
-            <div class="pick-card">
-              <div class="pick-img">
-                <img src="https://source.unsplash.com/200x200/?leafy-greens" />
-              </div>
-              <h5>Leafy Greens</h5>
-              <span>In Season: May – Oct</span>
+            <div class="quick-tags">
+              <span>Popular:</span>
+              <button data-quick="Tomatoes">Tomatoes</button>
+              <button data-quick="Berries">Berries</button>
+              <button data-quick="Greens">Leafy greens</button>
+              <button data-quick="Corn">Fresh corn</button>
             </div>
           </div>
         </div>
+        <div class="hero-badge">
+          <i data-lucide="heart"></i><strong>Good food</strong
+          ><span>starts local.</span>
+        </div>
+      </section>
+
+      <section class="stats-strip">
+        <div><strong>48+</strong><span>Local markets</span></div>
+        <div><strong>120+</strong><span>Local growers</span></div>
+        <div><strong>365</strong><span>Days of fresh</span></div>
+        <div class="stat-note">
+          <i data-lucide="leaf"></i
+          ><span>Supporting the people who grow our food.</span>
+        </div>
+      </section>
+
+      <section class="section" id="markets">
+        <div class="section-heading">
+          <div>
+            <div class="kicker">DISCOVER NEARBY</div>
+            <h2>Markets worth <em>wandering into.</em></h2>
+            <p>Hand-picked local markets with fresh finds waiting for you.</p>
+          </div>
+          <div class="heading-actions">
+            <button class="outline-btn" id="mapBtn">
+              <i data-lucide="map"></i> Explore map
+            </button>
+            <a href="#markets" class="text-link"
+              >View all <i data-lucide="arrow-up-right"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="market-grid" id="marketGrid"></div>
+        <div class="empty-state" id="emptyState" hidden>
+          <i data-lucide="search-x"></i>
+          <h3>No markets matched that search.</h3>
+          <p>Try another area, day, or produce type.</p>
+          <button class="outline-btn" id="clearBtn">Clear filters</button>
+        </div>
+      </section>
+
+      <section class="season-section" id="produce">
+        <div class="section-heading compact">
+          <div>
+            <div class="kicker">WHAT'S GOOD RIGHT NOW</div>
+            <h2>Seasonal <em>picks.</em></h2>
+            <p>Produce at its freshest, right when it should be.</p>
+          </div>
+          <a href="#produce" class="text-link"
+            >Open produce guide <i data-lucide="arrow-up-right"></i
+          ></a>
+        </div>
+        <div class="produce-grid" id="produceGrid"></div>
+      </section>
+
+      <section class="story" id="story">
+        <div class="story-image"></div>
+        <div class="story-copy">
+          <div class="kicker">WHY FRESHFIND?</div>
+          <h2>More than a market directory.</h2>
+          <p>
+            FreshFind connects you with the people, places, and produce behind
+            your food. Less scrolling. More discovering. And a little more
+            goodness in every basket.
+          </p>
+          <div class="story-points">
+            <div>
+              <span><i data-lucide="sprout"></i></span>
+              <div>
+                <strong>Local first</strong>
+                <p>Discover growers and makers near you.</p>
+              </div>
+            </div>
+            <div>
+              <span><i data-lucide="calendar-heart"></i></span>
+              <div>
+                <strong>Always in season</strong>
+                <p>Know what’s tasting best right now.</p>
+              </div>
+            </div>
+            <div>
+              <span><i data-lucide="hand-heart"></i></span>
+              <div>
+                <strong>Community powered</strong>
+                <p>Every visit helps local food systems thrive.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter" id="contact">
+        <div>
+          <div class="kicker">THE FRESH LETTER</div>
+          <h2>Fresh finds, delivered.</h2>
+          <p>
+            One short weekly email with seasonal produce, market events, and
+            local gems.
+          </p>
+        </div>
+        <form id="newsletterForm">
+          <input
+            type="email"
+            id="emailInput"
+            placeholder="Your email address"
+            required
+          />
+          <button class="search-btn" type="submit">
+            Join the list <i data-lucide="arrow-right"></i>
+          </button>
+          <small id="formMsg"></small>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-main">
+        <a class="brand" href="#">
+          <span class="brand-mark"><i data-lucide="sprout"></i></span>
+          <span
+            ><strong>Fresh<span>Find</span></strong
+            ><small>Fresh All Along</small></span
+          >
+        </a>
+        <div class="footer-links">
+          <div>
+            <strong>Explore</strong><a href="#markets">Markets</a
+            ><a href="#produce">Produce Guide</a><a href="#story">Our Story</a>
+          </div>
+          <div>
+            <strong>Community</strong><a href="#">For Growers</a
+            ><a href="#">List a Market</a><a href="#">Partner With Us</a>
+          </div>
+          <div>
+            <strong>Follow along</strong><a href="#">Instagram</a
+            ><a href="#">Facebook</a><a href="#">Newsletter</a>
+          </div>
+        </div>
       </div>
-    </section>
+      <div class="footer-bottom">
+        <span>© 2026 FreshFind. Made for local food lovers.</span
+        ><span>Fresh food. Stronger communities.</span>
+      </div>
+    </footer>
 
-    <div class="footer-band">
-      <div class="item">🌿 Support Local Farmers</div>
-      <div class="item">❤️ Eat Fresh &amp; Seasonal</div>
-      <div class="item">📍 Build Stronger Communities</div>
+    <div class="toast" id="toast">
+      <i data-lucide="check-circle-2"></i><span></span>
     </div>
 
-    <div class="chat-fab">
-      <div class="chat-bubble">Need help?<br />Chat with us!</div>
-      <div class="chat-btn">🤖<span class="dot"></span></div>
+    <div class="modal-backdrop" id="modalBackdrop" hidden>
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <button class="modal-close" id="modalClose" aria-label="Close">
+          <i data-lucide="x"></i>
+        </button>
+        <div id="modalContent"></div>
+      </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
